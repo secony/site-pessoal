@@ -1,31 +1,30 @@
 /* Edite aqui: marca, contatos, projetos, depoimentos, FAQ e tecnologias. */
 window.SITE = {
-  brand: "Guilherme Secone",           // trocar quando tiver marca definitiva
+  brand: "Guilherme Secone",
   contact: {
-    whatsapp: "",                       // ex.: "5517999999999"
-    email: "",                          // ex.: "contato@seudominio.com"
+    whatsapp: "",   // ex.: "5517999999999"
+    email: "",      // ex.: "contato@seudominio.com"
     message: "Olá! Vim pelo seu site e quero criar o meu."
   },
-  social: [
-    { label: "GitHub", url: "https://github.com/secony" }
-    // { label: "Instagram", url: "https://instagram.com/..." }
-  ],
+  social: [{ label: "GitHub", url: "https://github.com/secony" }],
   stack: ["HTML", "CSS", "JavaScript", "Firebase", "Git", "GitHub", "Vercel"],
 
-  // layout: "hero" | "grid" | "split" — muda só a composição do mockup
+  // image: caminho de um screenshot em img/ (ex.: "img/barbearia.png"). Sem image, aparece um mockup.
+  // layout do mockup: "hero" | "grid" | "split"
   projects: [
-    { name: "Clínica Aurora", category: "Site institucional", layout: "split",
+    { name: "Maycola do Corte", category: "Site para barbearia", layout: "hero",
+      desc: "Serviços, galeria de cortes e agendamento pelo WhatsApp para uma barbearia em São José do Rio Preto.",
+      url: "https://maycoladocorte.com.br/",  // confirme que está no ar
+      image: "", colors: { bg: "#16130f", fg: "#efe6da", ac: "#c9a24e" } },
+    { name: "Clínica Aurora", category: "Site institucional, demonstração", layout: "split",
       desc: "Apresentação de serviços e agendamento para uma clínica de fisioterapia.",
-      url: "#", colors: { bg: "#f3f1ec", fg: "#1d2b2a", ac: "#2f6f66" } },
-    { name: "Studio Lume", category: "Portfólio", layout: "grid",
+      url: "#", image: "", colors: { bg: "#f3f1ec", fg: "#1d2b2a", ac: "#2f6f66" } },
+    { name: "Studio Lume", category: "Portfólio, demonstração", layout: "grid",
       desc: "Portfólio de fotografia com galeria em destaque e contato direto.",
-      url: "#", colors: { bg: "#14110f", fg: "#efe6da", ac: "#c08a4e" } },
-    { name: "Casa Bruta", category: "Pequeno negócio", layout: "hero",
-      desc: "Vitrine de móveis sob medida com pedido de orçamento por WhatsApp.",
-      url: "#", colors: { bg: "#e7e2d8", fg: "#2a211a", ac: "#8a3b24" } }
+      url: "#", image: "", colors: { bg: "#241a14", fg: "#efe6da", ac: "#c08a4e" } }
   ],
 
-  // SUBSTITUIR por depoimentos reais assim que existirem.
+  // SUBSTITUIR por depoimentos reais.
   testimonials: [
     { text: "[Depoimento de exemplo: descreva aqui o resultado do projeto.]", name: "Nome do cliente", role: "Empresa ou cargo" },
     { text: "[Depoimento de exemplo: fale sobre a experiência de trabalhar junto.]", name: "Nome do cliente", role: "Empresa ou cargo" }
