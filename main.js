@@ -23,7 +23,7 @@
 
   // Visual do projeto: screenshot real (image) ou mockup
   const vars = p => `--mbg:${p.colors.bg};--mfg:${p.colors.fg};--mac:${p.colors.ac}`;
-  const mock = p => `<div class="mock ${p.layout}" style="${vars(p)}"><div class="m-nav"><b class="m-logo"></b><span class="m-links"><i></i><i></i><i></i></span></div><div class="m-hero"><div class="m-copy"><b class="m-t"></b><b class="m-t s"></b><b class="m-l"></b><b class="m-l s"></b><b class="m-btn"></b></div><div class="m-img"></div></div><div class="m-row"><i></i><i></i><i></i></div></div>`;
+  const mock = p => `<div class="mock l-${p.layout}" style="${vars(p)}"><div class="m-nav"><b class="m-logo"></b><span class="m-links"><i></i><i></i><i></i></span></div><div class="m-hero"><div class="m-copy"><b class="m-t"></b><b class="m-t s"></b><b class="m-l"></b><b class="m-l s"></b><b class="m-btn"></b></div><div class="m-img"></div></div><div class="m-row"><i></i><i></i><i></i></div></div>`;
   const shot = p => p.image ? `<img src="${p.image}" alt="Página inicial do site ${p.name}" loading="lazy">` : mock(p);
   const ext = u => /^https?:/.test(u) ? ' target="_blank" rel="noopener"' : "";
 
@@ -42,7 +42,7 @@
     const p = S.projects[i++ % S.projects.length];
     const cur = stage.firstElementChild;
     if (p.image || !cur || !cur.classList.contains("mock")) stage.innerHTML = shot(p);
-    if (!p.image) { const m = stage.firstElementChild; m.className = "mock " + p.layout; m.setAttribute("style", vars(p)); }
+    if (!p.image) { const m = stage.firstElementChild; m.className = "mock l-" + p.layout; m.setAttribute("style", vars(p)); }
     cap.textContent = `${p.name}, ${p.category.toLowerCase()}`;
   };
   show();

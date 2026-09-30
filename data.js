@@ -10,7 +10,7 @@ window.SITE = {
   stack: ["HTML", "CSS", "JavaScript", "Firebase", "Git", "GitHub", "Vercel"],
 
   // image: caminho de um screenshot em img/ (ex.: "img/barbearia.png"). Sem image, aparece um mockup.
-  // layout do mockup: "hero" | "grid" | "split"
+  // layout do mockup: "hero" | "grid" | "split" (vira a classe l-hero etc., sem relação com a seção hero)
   projects: [
     { name: "Maycola do Corte", category: "Site para barbearia", layout: "hero",
       desc: "Serviços, galeria de cortes e agendamento pelo WhatsApp para uma barbearia em São José do Rio Preto.",

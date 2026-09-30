@@ -64,9 +64,9 @@ figcaption{color:var(--mut);font-size:.88rem;margin-top:22px}
 .m-img{background:var(--mac);opacity:.5;border-radius:8px;min-height:60px;transition:background .9s}
 .m-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .m-row i{height:clamp(26px,5vw,48px);opacity:.14;border-radius:6px}
-.mock.split .m-hero{grid-template-columns:1.1fr 1fr}.mock.split .m-img{min-height:0}
-.mock.hero .m-hero{grid-template-rows:1fr auto}.mock.hero .m-img{order:-1}
-.mock.grid .m-row i{opacity:.3;background:var(--mac)}
+.mock.l-split .m-hero{grid-template-columns:1.1fr 1fr}.mock.l-split .m-img{min-height:0}
+.mock.l-hero .m-hero{grid-template-rows:1fr auto}.mock.l-hero .m-img{order:-1}
+.mock.l-grid .m-row i{opacity:.3;background:var(--mac)}
 
 /* listas */
 .list{list-style:none;padding:0;margin-top:48px}
