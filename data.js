@@ -1,4 +1,4 @@
-/* Edite aqui: marca, contatos, projetos, depoimentos, FAQ e tecnologias. */
+/* Edite aqui: marca, contatos, projetos, FAQ e tecnologias. */
 window.SITE = {
   brand: "Guilherme Secone",
   contact: {
@@ -14,20 +14,13 @@ window.SITE = {
   projects: [
     { name: "Maycola do Corte", category: "Site para barbearia", layout: "hero",
       desc: "Serviços, galeria de cortes e agendamento pelo WhatsApp para uma barbearia em São José do Rio Preto.",
-      url: "https://maycoladocorte.com.br/",  // confirme que está no ar
       image: "", colors: { bg: "#16130f", fg: "#efe6da", ac: "#c9a24e" } },
     { name: "Clínica Aurora", category: "Site institucional, demonstração", layout: "split",
       desc: "Apresentação de serviços e agendamento para uma clínica de fisioterapia.",
-      url: "#", image: "", colors: { bg: "#f3f1ec", fg: "#1d2b2a", ac: "#2f6f66" } },
+      image: "", colors: { bg: "#f3f1ec", fg: "#1d2b2a", ac: "#2f6f66" } },
     { name: "Studio Lume", category: "Portfólio, demonstração", layout: "grid",
       desc: "Portfólio de fotografia com galeria em destaque e contato direto.",
-      url: "#", image: "", colors: { bg: "#241a14", fg: "#efe6da", ac: "#c08a4e" } }
-  ],
-
-  // SUBSTITUIR por depoimentos reais.
-  testimonials: [
-    { text: "[Depoimento de exemplo: descreva aqui o resultado do projeto.]", name: "Nome do cliente", role: "Empresa ou cargo" },
-    { text: "[Depoimento de exemplo: fale sobre a experiência de trabalhar junto.]", name: "Nome do cliente", role: "Empresa ou cargo" }
+      image: "", colors: { bg: "#241a14", fg: "#efe6da", ac: "#c08a4e" } }
   ],
 
   faq: [

@@ -25,13 +25,11 @@
   const vars = p => `--mbg:${p.colors.bg};--mfg:${p.colors.fg};--mac:${p.colors.ac}`;
   const mock = p => `<div class="mock l-${p.layout}" style="${vars(p)}"><div class="m-nav"><b class="m-logo"></b><span class="m-links"><i></i><i></i><i></i></span></div><div class="m-hero"><div class="m-copy"><b class="m-t"></b><b class="m-t s"></b><b class="m-l"></b><b class="m-l s"></b><b class="m-btn"></b></div><div class="m-img"></div></div><div class="m-row"><i></i><i></i><i></i></div></div>`;
   const shot = p => p.image ? `<img src="${p.image}" alt="Página inicial do site ${p.name}" loading="lazy">` : mock(p);
-  const ext = u => /^https?:/.test(u) ? ' target="_blank" rel="noopener"' : "";
 
   S.projects.forEach(p => {
     const f = el("article", "work");
-    f.innerHTML = `<a class="shot" href="${p.url}"${ext(p.url)} aria-label="Visualizar ${p.name}"><div class="bar"><i></i><i></i><i></i><span>${p.url.replace(/^https?:\/\/|\/$/g, "").replace(/^#$/, "")}</span></div>${shot(p)}</a>
-      <div class="meta"><div><h3>${p.name}</h3><p>${p.desc}</p></div><span class="tag">${p.category}</span></div>
-      <a class="link" href="${p.url}"${ext(p.url)}>Visualizar projeto</a>`;
+    f.innerHTML = `<div class="shot"><div class="bar"><i></i><i></i><i></i></div>${shot(p)}</div>
+      <div class="meta"><div><h3>${p.name}</h3><p>${p.desc}</p></div><span class="tag">${p.category}</span></div>`;
     $("#works").append(f);
   });
 
@@ -48,7 +46,6 @@
   show();
   if (!reduce && S.projects.length > 1) setInterval(() => { if (!document.hidden) show(); }, 4200);
 
-  S.testimonials.forEach(t => $("#quotes").append(el("blockquote", "", `<p>${t.text}</p><footer>${t.name}, ${t.role}</footer>`)));
   S.faq.forEach(([q, a]) => $("#faq-list").append(el("details", "", `<summary>${q}</summary><p>${a}</p>`)));
 
   const btn = $(".menu-btn"), nav = $(".nav");
